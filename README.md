@@ -1,133 +1,126 @@
-🧠 Plagiarism Detector and File Comparison Tool
-🔍 Overview
-Plagiarism Detector and File Comparison is a Python-based application that allows users to:
+# Plagarism Detector
+The Plagiarism Detector project provides a comprehensive solution for detecting plagiarism and finding similarities between text documents. Leveraging the power of natural language processing (NLP), web scraping techniques, and data visualization tools, the project offers users a user-friendly interface to input text or upload files for analysis. The system employs algorithms such as tokenization, cosine similarity calculation, and web scraping to extract relevant information and compare text content. Through an intuitive web application built using Streamlit, users can easily identify potential instances of plagiarism or similarities between documents. The project also includes interactive visualizations, powered by Plotly and Plotly Express, to present the results in a clear and informative manner. Overall, the Plagiarism Detector project serves as a valuable tool for educators, researchers, and content creators to ensure the integrity and originality of written work.
 
-Check for plagiarism between two files
+## Features
 
-Manually input content for analysis
+- Light/dark mode toggle
+- Fullscreen mode
+- Flexible Input Options 
+- Comprehensive Analysis
+- Web Scraping Capabilities
+- Advanced Similarity Measurement
+- Interactive Visualizations
+- User-Friendly Interface
 
-Search the internet for similar content (like a Google search)
+## Tech Stack
 
-This project is ideal for students, researchers, and content creators who want to ensure originality and find reference material instead of copying.
+**Client:** Streamlit, HTML/CSS.
 
-🧰 Features Based on User Options:
-🔹 1. Online Search
-Allows users to enter content manually or from a file
+**Server:** Python
 
-The system searches Google and other platforms for similar content
+**Libraries & Algorithms:** 
 
-Retrieves:
+*Libraries:*
+- Pandas
+- NLTK (Natural Language Toolkit)
+- Beautiful Soup
+- CountVectorizer and cosine_similarity from scikit-learn
+- docx2txt
+- PyPDF2
+- plotly.express (px)
+  
+*Algorithms:*
+- Tokenization
+- Cosine Similarity
+- Web Scraping
+- Document Retrieval
+- Data Visualization
 
-Web articles
 
-YouTube videos
+## Usage/Examples
 
-Research papers
+```python
+def get_similarity(text1, text2):
+    text_list = [text1, text2]
+    cv = CountVectorizer()
+    count_matrix = cv.fit_transform(text_list)
+    similarity = cosine_similarity(count_matrix)[0][1]
+    return similarity
 
-Educational blogs
+def get_similarity_list(texts, filenames=None):
+    similarity_list = []
+    if filenames is None:
+        filenames = [f"File {i+1}" for i in range(len(texts))]
+    for i in range(len(texts)):
+        for j in range(i+1, len(texts)):
+            similarity = get_similarity(texts[i], texts[j])
+            similarity_list.append((filenames[i], filenames[j], similarity))
+    return similarity_list
+```
 
-Displays links to potentially matching sources
+## Run Locally
 
-🔹 2. Manual File Input
-Users can paste or type content directly into the program
+Clone the project
 
-Compares entered text against existing files or online sources
+```bash
+  git clone https://github.com/Karthik-02/plagiarism-detection.git
+```
 
-Great for quick checks without uploading documents
+Go to the project directory
 
-🔹 3. Compare Two Files
-Upload any two documents (.txt, .pdf, or .docx)
+```bash
+  cd plagiarism-detection
+```
 
-System compares them and displays a plagiarism percentage
+Install dependencies
 
-Highlights matched content and phrases
+```bash
+  pip install -r requirements.txt
+```
 
-Uses TF-IDF with cosine similarity
+Start the server
 
-🖥️ Technologies Used
-Python (core language)
+```bash
+  streamlit run app.py
+```
+## Screenshots
+![image](https://github.com/Karthik-02/plagiarism-detection/assets/81423983/68ab81eb-da46-4180-b25e-5cd88a609da9)
 
-Tkinter or CLI-based options
+![image](https://github.com/Karthik-02/plagiarism-detection/assets/81423983/e0c97e0b-1122-4d28-ba46-95b16017d901)
 
-scikit-learn – for text similarity
+![image](https://github.com/Karthik-02/plagiarism-detection/assets/81423983/09ebf7bc-1736-4927-a2e1-c27616831f35)
 
-nltk or spaCy – for text preprocessing
+![image](https://github.com/Karthik-02/plagiarism-detection/assets/81423983/6b02553c-4c4c-4359-a551-b0f30067a0ba)
 
-PyPDF2, docx – to read files
+![image](https://github.com/Karthik-02/plagiarism-detection/assets/81423983/77223ada-a79b-419b-b1af-08aa58e0fc84)
 
-requests, BeautifulSoup or SerpAPI – for online search
+![image](https://github.com/Karthik-02/plagiarism-detection/assets/81423983/0744bc50-6840-4893-a7c3-99e7834ab747)
 
-Optionally, Flask – for web version
+## Authors
+- [@KarthikS](https://www.github.com/Karthik-02)
+  
 
-📁 Sample Directory Structure
-css
-Copy
-Edit
-plagiarism-detector/
-├── main.py
-├── file_comparison.py
-├── internet_search.py
-├── ui_menu.py
-├── input_docs/
-│   ├── input1.txt
-│   ├── input2.pdf
-└── README.md
-▶️ How to Run
-Clone the repository
 
-bash
-Copy
-Edit
-git clone https://github.com/your-username/plagiarism-detector.git
-cd plagiarism-detector
-Install the required libraries
 
-bash
-Copy
-Edit
-pip install -r requirements.txt
-Run the program
 
-bash
-Copy
-Edit
-python main.py
-Choose from menu:
 
-Online Search
 
-Manual File Input
 
-Compare Two Files
 
-🌐 Online Output Example
-Input: "Machine learning is a field of artificial intelligence..."
 
-Suggested Sources:
 
-🔗 YouTube - Introduction to Machine Learning
 
-🔗 Wikipedia - Machine Learning
 
-🔗 ResearchGate - Machine Learning Overview
 
-💡 Use Cases
-Detect plagiarism in college assignments or research papers
 
-Compare old and new versions of content
 
-Find credible sources and cite them properly
 
-Help users rephrase and improve content originality
 
-🚀 Future Enhancements
-Browser plugin for real-time plagiarism check
 
-Save reports in PDF format
 
-AI-based paraphrasing detection
 
-🙋 Author
-Jayavarma
-🎓 Final year student | Passionate about AI & NLP
-📧 [sjayavarmas@gmail.com]# PLAGIARISM-FILE-COMPARISION
+
+
+
+## Badges
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)

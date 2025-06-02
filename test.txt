@@ -1,0 +1,33 @@
+-IOT important [  Underline the Concept keyword , Use Daigram , Points to clear lines ] 
+1. Assignment question * 
+2. based on the lab code sketch code model * 
+3. layer -> stack [ same meaning ] * 
+4. all difference cover 2 unit diff BTW question *
+5. communication protocol Structure diagram and procedure * 
+6. frame structure & Protocol Structure * 
+7. IT and OT responsibilities in the IoT Reference Model 
+8. Type of Sensor 
+9. FDMA & Cdma & SDMA  
+10. Mobile Connectivity structure & reuse & Hand Over 
+11. unit - 1 [ 7 layer in IOT ] 
+CSMA - Collision Avoidance 
+understand the FSM model Logic how to upply in USE CASE 
+12. Edge Computing in IOT 
+13 study the Sensor in book 
+14 . COAP Contract Application 
+---------------------------------------
+2 Marks :
+1. Embedded system of IOT 
+2.Principle of Sensor [ major Sensor , PIR Sensor , Harversting , 
+3.Standards the IEEE 15.4 
+4.Zeebee Concept
+5. Non-IP based WPAN: IEEE802.15.4– Zigbee– Zigwave.
+6.spec Sprectrum 
+7. Bandwith 
+8.Need for Carrier Signal 
+9. bit Rate and Bod Rate in IOT
+[ understand the function of the code like pseudo code ]
+10 . be aware of the computer Networks , topology , CRC  , all physical layer , Mac address , IP Address , protocol in Networks .
+11. Data gram , pack and frame data link layer , transport layer 
+12. edge and Fog  computing diff btw 
+13. Routing Protocols & mesh flow diagram
